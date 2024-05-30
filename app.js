@@ -148,7 +148,7 @@ app.post('/webhook', async (req, res) => {
     }
 
     try{
-        sendWhatsapp(messageResponse, phoneNumber);
+        sendWhatsapp(responseMessage, phoneNumber);
     }catch(err){
         console.error(`No se ha podido enviar el mensaje de Whatsapp para ${phoneNumber}`)
         res.sendStatus(500);
